@@ -1,0 +1,4 @@
+<launch>
+  <include file="src/tf_processor/launch/G2.launch" />
+  <include file="src/tf_processor/launch/G6.launch" />
+</launch>

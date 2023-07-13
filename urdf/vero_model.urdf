@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<robot name="myfirst">
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 1.570796" />
+            <geometry>
+                <box size="2 2 0.2"/>
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+    </link>
+    
+    <link name="lidar1_link">
+    <visual>
+        <geometry>
+            <box size="0.1 0.1 0.1"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <material name="Magenta">
+            <color rgba="1 0 1 1.0"/>
+        </material>
+    </visual>
+    </link>
+
+    <joint name="base_to_lidar1" type="fixed">
+        <parent link="base_link"/>
+        <child link="lidar1_link"/>
+        <origin xyz="1 1 0.1" rpy="0 0 0.7853"/>
+    </joint>
+
+    <link name="lidar2_link">
+    <visual>
+        <geometry>
+            <box size="0.1 0.1 0.1"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <material name="green">
+            <color rgba="0 1 0 1.0"/>
+        </material>
+    </visual>
+    </link>
+
+    <joint name="base_to_lidar2" type="fixed">
+        <parent link="base_link"/>
+        <child link="lidar2_link"/>
+        <origin xyz="-1 -1 0.1" rpy="0 0 -2.356194"/>
+    </joint>
+
+
+    <link name="camera_link">
+    <visual>
+        <geometry>
+            <box size="0.1 0.1 0.1"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <material name="yellow">
+            <color rgba="1 1 0 1.0"/>
+        </material>
+    </visual>
+    </link>
+
+    <joint name="base_to_camera" type="fixed">
+        <parent link="base_link"/>
+        <child link="camera_link"/>
+        <origin xyz="1 0 0.1" rpy="0 0 -1.5708"/>
+    </joint>
+
+</robot>
