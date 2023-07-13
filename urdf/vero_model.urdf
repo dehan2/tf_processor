@@ -27,7 +27,7 @@
     <joint name="base_to_lidar1" type="fixed">
         <parent link="base_link"/>
         <child link="lidar1_link"/>
-        <origin xyz="1 1 0.1" rpy="0 0 0.7853"/>
+        <origin xyz="0.15 0.15 0.1" rpy="0 0 0.7853"/>
     </joint>
 
     <link name="lidar2_link">
@@ -45,7 +45,7 @@
     <joint name="base_to_lidar2" type="fixed">
         <parent link="base_link"/>
         <child link="lidar2_link"/>
-        <origin xyz="-1 -1 0.1" rpy="0 0 -2.356194"/>
+        <origin xyz="-0.15 -0.15 0.1" rpy="0 0 -2.356194"/>
     </joint>
 
 
@@ -64,7 +64,7 @@
     <joint name="base_to_camera" type="fixed">
         <parent link="base_link"/>
         <child link="camera_link"/>
-        <origin xyz="1 0 0.1" rpy="0 0 -1.5708"/>
+        <origin xyz="0.15 0 0.1" rpy="0 0 -1.5708"/>
     </joint>
 
 </robot>
