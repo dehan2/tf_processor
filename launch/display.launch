@@ -1,6 +1,6 @@
 <launch>
 
-  <arg name="model" default="$(find tf_processor)/urdf/01-myfirst.urdf"/>
+  <arg name="model" default="$(find tf_processor)/urdf/pioneer.urdf"/>
   <arg name="gui" default="true" />
   <arg name="rvizconfig" default="$(find tf_processor)/rviz/urdf.rviz" />
 
