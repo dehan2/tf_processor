@@ -3,9 +3,12 @@ Panels:
     Help Height: 70
     Name: Displays
     Property Tree Widget:
-      Expanded: ~
+      Expanded:
+        - /TF1/Frames1
+        - /PointCloud21/Status1
+        - /LaserScan2/Status1
       Splitter Ratio: 0.5
-    Tree Height: 296
+    Tree Height: 645
   - Class: rviz/Views
     Expanded:
       - /Current View1
@@ -46,17 +49,62 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
+        Rueda_der_delantera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Rueda_der_trasera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Rueda_izq_delantera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Rueda_izq_trasera_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Sonar_delantero_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Sonar_trasero_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        astra_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        lidar1_link:
+        cam_actuator_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        lidar2_link:
+        cubierta_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        lidar_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        shell_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -73,12 +121,48 @@ Visualization Manager:
       Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
-        All Enabled: true
+        All Enabled: false
+        Rueda_der_delantera_link:
+          Value: false
+        Rueda_der_trasera_link:
+          Value: false
+        Rueda_izq_delantera_link:
+          Value: false
+        Rueda_izq_trasera_link:
+          Value: false
+        Sonar_delantero_link:
+          Value: false
+        Sonar_trasero_link:
+          Value: false
+        astra_link:
+          Value: true
+        base_footprint:
+          Value: false
         base_link:
+          Value: false
+        cam_actuator_link:
+          Value: false
+        camera_color_frame:
+          Value: false
+        camera_color_optical_frame:
+          Value: false
+        camera_depth_frame:
+          Value: false
+        camera_depth_optical_frame:
+          Value: false
+        camera_ir_frame:
+          Value: false
+        camera_ir_optical_frame:
+          Value: false
+        camera_link:
           Value: true
-        lidar1_link:
+        cubierta_link:
+          Value: false
+        laser_frame:
+          Value: false
+        lidar_link:
           Value: true
-        lidar2_link:
+        shell_link:
           Value: true
       Marker Alpha: 1
       Marker Scale: 1
@@ -87,12 +171,123 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
+        base_footprint:
+          {}
         base_link:
-          lidar1_link:
+          Rueda_der_delantera_link:
             {}
-          lidar2_link:
+          Rueda_der_trasera_link:
             {}
+          Rueda_izq_delantera_link:
+            {}
+          Rueda_izq_trasera_link:
+            {}
+          Sonar_delantero_link:
+            {}
+          Sonar_trasero_link:
+            {}
+          cubierta_link:
+            shell_link:
+              cam_actuator_link:
+                astra_link:
+                  camera_link:
+                    camera_color_frame:
+                      camera_color_optical_frame:
+                        {}
+                    camera_depth_frame:
+                      camera_depth_optical_frame:
+                        {}
+                    camera_ir_frame:
+                      camera_ir_optical_frame:
+                        {}
+              lidar_link:
+                laser_frame:
+                  {}
       Update Interval: 1
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/PointCloud2
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: PointCloud2
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /camera/depth/points
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: true
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: false
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: LaserScan
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /scan
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
+      Value: false
+    - Alpha: 1
+      Autocompute Intensity Bounds: true
+      Autocompute Value Bounds:
+        Max Value: 10
+        Min Value: -10
+        Value: true
+      Axis: Z
+      Channel Name: intensity
+      Class: rviz/LaserScan
+      Color: 255; 255; 255
+      Color Transformer: Intensity
+      Decay Time: 0
+      Enabled: true
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Min Color: 0; 0; 0
+      Name: LaserScan
+      Position Transformer: XYZ
+      Queue Size: 10
+      Selectable: true
+      Size (Pixels): 3
+      Size (m): 0.009999999776482582
+      Style: Flat Squares
+      Topic: /scan3
+      Unreliable: false
+      Use Fixed Frame: true
+      Use rainbow: true
       Value: true
   Enabled: true
   Global Options:
@@ -107,7 +302,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.9611330032348633
+      Distance: 5.260289192199707
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -123,19 +318,19 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.3947964906692505
+      Pitch: 0.06479758769273758
       Target Frame: <Fixed Frame>
-      Yaw: 3.1649856567382812
+      Yaw: 1.378696322441101
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 800
+  Height: 1376
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd000000010000000000000158000002c6fc0200000002fb000000100044006900730070006c006100790073010000003d000001ab000000c900fffffffb0000000a0056006900650077007301000001ee00000115000000a400ffffff00000352000002c600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000001000000000000015800000506fc0200000002fb000000100044006900730070006c006100790073010000003d00000308000000c900fffffffb0000000a00560069006500770073010000034b000001f8000000a400ffffff0000085a0000050600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
-  Width: 1200
-  X: 205
-  Y: 160
+  Width: 2488
+  X: 72
+  Y: 27

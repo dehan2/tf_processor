@@ -423,7 +423,7 @@
     <child link="cam_actuator_link"/>
 </joint>
 
-<link name="cam_link">
+<link name="astra_link">
     <visual>
         <geometry>
             <box size="0.02 0.04 0.02"/>
@@ -433,11 +433,11 @@
     </visual>
 </link>
 
-<joint name="actuator_cam_joint" type="continuous">
+<joint name="actuator_astra_joint" type="continuous">
     <axis xyz="0 0 1"/>
     <origin xyz="0 0 0.03" rpy="0 0 0"/>
     <parent link="cam_actuator_link"/>
-    <child link="cam_link"/>
+    <child link="astra_link"/>
 </joint>
 
 
